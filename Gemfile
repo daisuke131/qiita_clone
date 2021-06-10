@@ -33,6 +33,10 @@ group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "onkcop", require: true
   gem "rubocop-rails"
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'rexml'
 end
 
 group :development do
