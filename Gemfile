@@ -6,7 +6,10 @@ ruby "3.0.1"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem "rails", "~> 6.1.3", ">= 6.1.3.2"
 # Use mysql as the database for Active Record
+gem "devise"
+gem "devise_token_auth"
 gem "mysql2", "~> 0.5"
+gem "rack-cors"
 # Use Puma as the app server
 gem "puma", "~> 5.0"
 # Use SCSS for stylesheets
@@ -31,12 +34,12 @@ gem "bootsnap", ">= 1.4.4", require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "factory_bot_rails"
+  gem "faker"
   gem "onkcop", require: true
+  gem "rexml"
+  gem "rspec-rails"
   gem "rubocop-rails"
-  gem 'rspec-rails'
-  gem 'factory_bot_rails'
-  gem 'faker'
-  gem 'rexml'
 end
 
 group :development do
