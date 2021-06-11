@@ -56,7 +56,7 @@ end
 group :test do
   gem "factory_bot_rails"
   gem "faker"
-  gem "rspec_junit_formatter"
+  gem "rexml"
   gem "rspec-rails"
 end
 
