@@ -1,5 +1,5 @@
 class Article < ApplicationRecord
   belongs_to :user
   validates :title, :body, presence: true
-  enum status: { published: 0, draft: 1 }
+  enum status: { draft: 0, published: 1 }
 end
