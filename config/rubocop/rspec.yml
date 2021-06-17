@@ -43,6 +43,9 @@ RSpec/InstanceVariable:
 RSpec/NamedSubject:
   Enabled: false
 
+RSpec/MultipleExpectations:
+  Enabled: false
+
 # Model
 #  `- #method
 #      |- 頻出ケースのテスト 1

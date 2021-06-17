@@ -3,7 +3,15 @@ AllCops:
   Exclude:
     - "node_modules/**/*" # rubocop config/default.yml
     - "vendor/**/*"       # rubocop config/default.yml
-    - "db/schema.rb"
+    - "db/**/*"
+    - "bin/**/*"
+    - "config/initializers/*"
+    - "config/environments/*"
+    - "config/environment.rb"
+    - "config/application.rb"
+    - "config/boot.rb"
+    - "config/spring.rb"
+    - "config.ru"
 
 #################### Layout ################################
 
