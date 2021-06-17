@@ -14,10 +14,6 @@ RSpec.describe Article, type: :model do
       it "関連するuserのレコードが取得できること" do
         expect(article.user_id).to eq(user.id)
       end
-
-      it "投稿したユーザーidが保存される" do
-        expect(article.user_id).to eq user.id
-      end
     end
 
     context "titleを指定していないとき" do
