@@ -25,6 +25,7 @@ jobs:
     environment:
       BUNDLE_JOBS: "3"
       BUNDLE_RETRY: "3"
+      BUNDLE_PATH: vendor/bundle
     steps:
       - checkout
       - ruby/install-deps
@@ -38,7 +39,8 @@ jobs:
       - run: mv ./config/database.yml.ci ./config/database.yml
       - run:
           name: Database setup
-          command: bundle exec rails db:create db:schema:load --trace
+          command: |
+            bundle exec rails db:create db:migrate db:seed
       - ruby/rspec-test
       - ruby/rubocop-check
 
