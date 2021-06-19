@@ -64,7 +64,7 @@ yarn-debug.log*
 
 # Ignore uploaded files in development
 /storage/*
-!/storage/.keep
+.keep
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
@@ -76,3 +76,4 @@ yarn-debug.log*
 yarn-debug.log*
 .yarn-integrity
 db/schema.rb
+.DS_Store
