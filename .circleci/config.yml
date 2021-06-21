@@ -40,7 +40,7 @@ jobs:
       - run:
           name: Database setup
           command: |
-            bundle exec rails db:create db:migrate db:seed
+            bundle exec rake db:create db:schema:load
       - ruby/rspec-test
       - ruby/rubocop-check
 
