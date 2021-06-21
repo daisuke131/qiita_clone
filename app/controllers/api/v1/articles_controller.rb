@@ -8,7 +8,11 @@ class Api::V1::ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.published.find(params[:id])
+    @article = if current_user
+                 current_user.articles.find(params[:id])
+               else
+                 Article.published.find(params[:id])
+               end
     render json: @article
   end
 
