@@ -1,9 +1,11 @@
 import { createApp } from 'vue'
-import App from './components/home_container.vue'
+import App from '../app.vue'
 import { store, key } from './store/store'
+import router from "./router/router";
 
 document.addEventListener('DOMContentLoaded', () => {
-  const app = createApp(App)
-  app.use(store, key)
-  app.mount('#app')
+  const app = createApp(App);
+  app.use(store, key);
+  app.use(router);
+  app.mount('#app');
 })
