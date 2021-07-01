@@ -2,10 +2,11 @@
   <div id="home-container">
     <ul>
       <li v-for="article in $store.state.articles" :key="article.id">
-        <!-- <router-link :to="{ name : 'article', params: { id: article.id }}"> -->
+        <router-link :to="{ name : 'Article', params: { id: article.id }}">
           <div>{{article.title}}</div>
-        <!-- </router-link> -->
+        </router-link>
         <div>{{article.body}}</div>
+        <div>{{article.user.email}}</div>
       </li>
     </ul>
   </div>
@@ -13,7 +14,7 @@
 
 <script lang="ts">
 import { defineComponent, onMounted, computed } from "vue";
-import { useStore } from '../store/store'
+import { useStore } from 'vuex'
 
 export default defineComponent({
   setup () {
